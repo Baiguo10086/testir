@@ -31,11 +31,11 @@ label2:
   sw $s0, array + 0 
   addi $sp, $sp, -8 
   sw $ra, 0($sp)
-  sw a0, 4($sp)
+  sw $a0, 4($sp)
   lw $a0, array + 0
   jal fact
   lw $ra, 0($sp)
-  lw a0, 4($sp)
+  lw $a0, 4($sp)
   addi $sp, $sp, 8 
   move $s0, $v0
   sw $s0, array + 4
@@ -63,14 +63,14 @@ main:
 label3:
   addi $sp, $sp, -12 
   sw $ra, 0($sp)
-  sw a0, 4($sp)
-  sw a1, 8($sp)
+  sw $a0, 4($sp)
+  sw $a1, 8($sp)
   lw $a0, array + 16
   lw $a1, array + -1
   jal fact
   lw $ra, 0($sp)
-  lw a0, 4($sp)
-  lw a1, 8($sp)
+  lw $a0, 4($sp)
+  lw $a1, 8($sp)
   addi $sp, $sp, 12 
   move $s0, $v0
   sw $s0, array + 20
